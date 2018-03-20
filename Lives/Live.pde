@@ -1,3 +1,5 @@
+By Nate Payne
+
 class Live {
   int live;
   PImage testup;
