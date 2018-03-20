@@ -1,3 +1,5 @@
+By Nate Payne
+
 class Ship {
   //Member variables
   int size;
