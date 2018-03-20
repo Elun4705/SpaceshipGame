@@ -11,7 +11,7 @@ void setup() {
   score = new Score();
   powerup = new Powerups();
   movetimer = new Timer(3000);
-  a1 = new Ship();
+  a1 = new Ship(900,250,70,70);
   size(1000, 600);
   background(255);
   beamActive = false;  
