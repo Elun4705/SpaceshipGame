@@ -3,6 +3,7 @@ Wall tw;
 Wall bw;
 int yt;
 int sec;
+int counter = 0;
 
 void setup () {
   
@@ -15,10 +16,15 @@ void setup () {
 }
 
 void draw () {
+  counter++;
   background(255);
   Enemyship.display();
   tw.display();
-  sec++;
+  if (counter>10) {
+    sec++;
+    counter = 0;
+  }
+  //sec++;
   tw.s = sec;
   if (sec > 50) {
     sec = 50;
@@ -27,7 +33,7 @@ void draw () {
   bw.s = sec;
   
   
-  //for (int i = wall; i>= 0; i--) {
+  //for (int i = Wall; i>= 0; i--) {
     
   //}
 }
