@@ -1,4 +1,4 @@
-By Nate Payne
+//By Nate Payne
 
 class Live {
   int live;
