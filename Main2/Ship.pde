@@ -1,11 +1,19 @@
 class Ship {
   PImage img;
-  int y = 250;
+  int ,y,w,h;
   boolean up = false;
-  int r;
+  float r;
+  
+  Ship(int x, int y, int w, int h) {
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.h = h;
+  }
+  
   void display() {
     img = loadImage("PurpleSpaceship.png");
-    image(img, 900, y, 70, 70);
+    image(img, x,y,w,h);
   }
   void movement() {
     if (up) {
