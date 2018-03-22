@@ -3,7 +3,7 @@ class Ship {
   int size;
   PImage test;
   int x, y;
-  laser gun;
+  //laser gun;
   
   //Constructor
   Ship(int size, int p) {
