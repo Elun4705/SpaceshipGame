@@ -19,11 +19,14 @@ class Timer {
     // Check how much time has passed
     int passedTime = millis()- savedTime;
     if (passedTime > totalTime) {
+      
       return true;
     } else {
       return false;
     }
   }
-}
+    
+  }
+
 
 //Code from: Daniel Shiffman

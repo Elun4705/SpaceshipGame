@@ -1,18 +1,41 @@
 class Ship {
-PImage img;
-int y = 250;
-float r;
+  PImage img;
+  int x, y, w, h;
+  boolean up = true;
+  //int r;
 
-void display() {
-  img = loadImage("PurpleSpaceship.png");
-  
-  r = random(1,11);
-  
-  image(img,900,y,70,70);
-  if (r < 5) {
-    y--;
-  } else {
-    y++;
+  Ship(int x, int y, int w, int h) {
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.h = h;
   }
-}
+
+  void display() {
+    img = loadImage("PurpleSpaceship.png");
+    image(img, x, y, w, h);
+  }
+  
+  void movement() {
+    if (up) {
+      y-=5;
+      //if (y <= r) {
+      //  up = true;
+      //}
+    } else {
+      y+=5;
+    }
+  }
+  
+  void setrandom() {
+    up = !up;
+  }
+  
+  int topPosition() {
+    return y;
+  }
+  
+  int bottomPosition() {
+    return y + h;
+  }
 }
