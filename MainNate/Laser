@@ -1,0 +1,36 @@
+class Laser {
+  //int fx, fy;
+  int x, y;
+  float speed; 
+  color c;
+  float r; 
+
+  Laser(int x, int y) {
+    r = 4; 
+    this.x = x; 
+    this.y = y; 
+    speed = 5;//random(5, 22);    
+    c = color(255, 0, 0);
+  }
+
+  void fire() {
+    x -= speed;
+  }
+
+  boolean reachedLeft() {
+    if (x < 0 - 50) { 
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  void display() {
+    fill(c+y/2);
+    noStroke();
+    for (int i = 2; i < r; i++ ) {
+      rect(x+15, y+12, 8, r);
+      //rect(x+15, y+57, 8, r);
+    }
+  }
+}
