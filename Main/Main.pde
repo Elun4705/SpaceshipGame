@@ -32,7 +32,7 @@ void setup() {
   tw = new Wall(width/2, 0, width, 200);
   bw = new Wall(width/2, 500, width, 200);  
   for (int i = 0; i < stars.length; i++) {
-    stars[i] = new Star(int(random(height)), int(random(width)));
+    stars[i] = new Star(int(random(width)), int(random(height)));
   }
   x = 0;
   y = 0;
@@ -144,7 +144,12 @@ void gameplay() {
     }
     if (hero.topPosition() < tw.getBottomBoundary() ) {
       hero.health-=1;
-    } else if (hero.bottomPosition() > bw.getTopBoundary()){
+    } else if (hero.bottomPosition() > bw.getTopBoundary() ) {
+      hero.health-=1;
+    }
+    if (hero.topPosition() == a1.topPosition() ) {
+      hero.health-=1;
+    } else if (hero.bottomPosition() > a1.bottomPosition() ) {
       hero.health-=1;
     }
     ////alien ship movement

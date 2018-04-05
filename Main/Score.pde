@@ -3,10 +3,11 @@ class Score {
   void display() {
     //println(millis()/10);
     int s = millis()/10;
-    fill(255);
-    rect(450,450,50,50);
+    stroke(0);
     fill(0);
-    text(s, 939, 455);
+    rect(650,450,600,50);
+    fill(17,234,65);
+    text("Score: "  + s, 650, 460);
     if (s > 800) {
     //background(0);
     }
