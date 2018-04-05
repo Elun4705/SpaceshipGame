@@ -38,4 +38,5 @@ class Ship {
   int bottomPosition() {
     return y + h;
   }
+ 
 }

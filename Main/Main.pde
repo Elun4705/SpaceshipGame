@@ -42,6 +42,7 @@ void setup() {
   luck = 1;
   hasRun = true;
   //int s = second();
+  frameRate(30);
 }
 void draw() {
   noCursor();
@@ -138,18 +139,18 @@ void gameplay() {
     if (a1.topPosition() < tw.getBottomBoundary() ) {
       //println("horray top " + tw.getBottomBoundary() + " a1 " + a1.topPosition());
       a1.setrandom();
+      a1.y +=5;
     } else if ( a1.bottomPosition() > bw.getTopBoundary() ) {
       //println("horray bottom " + bw.getTopBoundary() + " a1 " + a1.bottomPosition());
       a1.setrandom();
+      a1.y -=5;
     }
     if (hero.topPosition() < tw.getBottomBoundary() ) {
       hero.health-=1;
     } else if (hero.bottomPosition() > bw.getTopBoundary() ) {
       hero.health-=1;
     }
-    if (hero.topPosition() == a1.topPosition() ) {
-      hero.health-=1;
-    } else if (hero.bottomPosition() > a1.bottomPosition() ) {
+    if (mouseX == a1.x && mouseY == a1.y ) {
       hero.health-=1;
     }
     ////alien ship movement
